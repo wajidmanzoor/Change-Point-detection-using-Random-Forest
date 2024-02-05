@@ -16,4 +16,5 @@ Series Segmentation Benchmark studied by Patrick Schafer, Arik Ermshaus, and Ulf
 ## References 
 [1] M. Londschien, P. BA¼hlmann, and S. Kov ˜ A¡cs, “Random forests for change point detection,” ˜ Journal of Machine Learning Research, vol. 24, no. 216,
 pp. 1–45, 2023.
+
 [2] A. Ermshaus, P. Schafer, and U. Leser, “Clasp: parameter-free time series segmentation,” ¨ Data Mining and Knowledge Discovery, 2023
