@@ -27,7 +27,7 @@ for seed, n_observations in enumerate(n_observations_list):
             for predicted_cpt,method_name, time_ in zip(predicted_change_points,method_names,time_taken):
                     rand_score = data_loader.calculate_rand_score(original_cpt,predicted_cpt)
                     file_.write(f"{seed+1},Dirichlet,{method_name},{rand_score},{time_},{n_segments},{n_observations}\n")
-        pbar.uppdate(1)
+    pbar.uppdate(1)
 pbar.close()
                     
 #Wine
@@ -43,7 +43,7 @@ for seed, n_observations in enumerate(n_observations_list):
             for predicted_cpt,method_name, time_ in zip(predicted_change_points,method_names,time_taken):
                     rand_score = data_loader.calculate_rand_score(original_cpt,predicted_cpt)
                     file_.write(f"{seed+1},Wine,{method_name},{rand_score},{time_},{n_segments},{n_observations}\n")
-        pbar.uppdate(1)
+    pbar.uppdate(1)
 pbar.close()
 
 
