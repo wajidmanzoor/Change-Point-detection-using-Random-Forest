@@ -74,3 +74,13 @@ rand_scores,runtimes,observation = get_data(df,method_names,segment_list=[20,80]
 plot_varying_samplesize_results(observation,rand_scores,"Dirichlet","Adjusted Rand Index","Sample Size",FIGURE_PATH)
 plot_varying_samplesize_results(observation,runtimes,"Dirichlet","Runtime","Sample Size",FIGURE_PATH)
 
+df  = pd.read_csv(os.path.join(RESULT_PATH,"Wine_with_noise_results_varying_segments (1).txt"),names=col_names)
+
+if len(df)%132!=0:
+    df= df[df['seed']!=df['seed'][len(df)-1]]
+    
+rand_scores,runtimes,observation = get_data(df,method_names,segment_list=[20,80])
+plot_varying_samplesize_results(observation,rand_scores,"Wine","Adjusted Rand Index","Sample Size",FIGURE_PATH)
+plot_varying_samplesize_results(observation,runtimes,"Wine","Runtime","Sample Size",FIGURE_PATH)
+
+

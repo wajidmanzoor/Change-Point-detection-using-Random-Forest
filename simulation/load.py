@@ -260,6 +260,26 @@ class LoadData:
         names_ = [i.split("/")[-1].split(".")[0] for i in file_paths]
         
         return data,change_points, dataset_names+names_
+    def get_all_no_change_data(self,file_paths,class_labels=None):
+        if class_labels == None:
+            class_labels = ['class']*len(file_paths)
+        dataset_names = ['CIM',"CIV","CIC","Dirichlet"]
+        inds = [(0,200),(0,200),(0,200),(370,520)]
+        data = []
+        for name, ind in zip(dataset_names,inds):
+            X,_ = self.get_generated_data(name)
+            data.append(X[ind[0]:ind[1],:])
+        for file_path,class_label in zip(file_paths,class_labels):
+            df = pd.read_csv(file_path)
+            values, counts = np.unique(df[class_label], return_counts=True)
+            most_frequent = values[np.argmax(counts)]
+            X = (df[lambda x: x[class_label] == most_frequent].drop(columns=class_label).to_numpy())
+            self.dataset_generator.shuffle(X)
+            data.append(X)
+        names_ = [i.split("/")[-1].split(".")[0] for i in file_paths]
+        
+        return data, dataset_names+names_
+        
     
             
                 
