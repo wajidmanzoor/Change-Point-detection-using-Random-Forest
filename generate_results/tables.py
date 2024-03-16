@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-RESULT_PATH = "../results/"
+RESULT_PATH = "../results"
 TABLES_PATH = os.path.join(RESULT_PATH,'tables')
         
 
