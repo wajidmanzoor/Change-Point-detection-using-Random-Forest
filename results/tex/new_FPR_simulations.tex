@@ -1,0 +1,26 @@
+
+\begin{table}[!ht]
+\centering
+{\rowcolors{3}{green!80!yellow!50}{green!70!yellow!40}
+\begin{tabular}{ |p{2cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|p{0.9cm}|}
+\hline
+\multicolumn{7}{|c|}{False Positive Rate} \\
+\hline
+
+\hline
+ & plane & Synthetic Control & Pistachio & Rice & Average & Worst  \\
+\hline
+\hline
+Change in Mean & 1.0 & 1.0 & 1.0 & 1.0& 1.0 & 1.0 \\
+change KNN & 0.03 & 0.03 & 0.04 & 0.02& 0.03 & 0.04 \\
+KCP-linear & 0.3 & 0.51 & 0.61 & 0.87& 0.57 & 0.87 \\
+KCP-rbf & 0.0 & 0.0 & 0.0 & 0.0& 0.0 & 0.0 \\
+MultiRank & 0.0 & 0.0 & 0.01 & 0.02& 0.01 & 0.02 \\
+Change Forest & 0.05 & 0.05 & 0.02 & 0.03& 0.04 & 0.05 \\
+\hline
+\end{tabular}}
+\\
+\caption{add label here}
+\vspace{10pt}
+\label{tab:yourlabel}
+\end{table}

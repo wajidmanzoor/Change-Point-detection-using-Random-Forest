@@ -73,6 +73,6 @@ fpr = add_header(table_start,11,"False Positive Rate")
 fpr = add_rand_table(fpr,fpr_df,0,8)
 fpr = add_footer(fpr,"add label here")
 
-file_ = open(os.path.join(TEX_PATH,"FPR_simulations.tex"))
+file_ = open(os.path.join(TEX_PATH,"FPR_simulations.tex"),'w')
 file_.write(fpr)
 file_.close()

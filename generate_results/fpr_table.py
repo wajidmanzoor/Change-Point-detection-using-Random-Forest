@@ -33,7 +33,7 @@ for line in new_lines:
         method_names.append(temp[2])
         seed.append(int(temp[0]))
         num_cpt.append(float(temp[4]))
-        predicted_cpts.append(list(map(float,re.findall(r'\d+(?:\.\d+)?',cpts[1])[1:-1])))
+        predicted_cpts.append(list(map(float,re.findall(r'\d+(?:\.\d+)?',cpts)[1:-1])))
 
 method_names = np.array(method_names)
 dataset_names = np.array(dataset_names)

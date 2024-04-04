@@ -1,0 +1,7 @@
+,Plane,synthetic Control,Pistachio,Rice
+Change in Mean,0.98,0.96,0.93,0.9
+change KNN,0.98,0.98,1.0,1.0
+KCP-linear,0.98,0.95,0.74,0.93
+KCP-rbf,0.0,0.0,0.0,0.0
+MultiRank,0.75,0.86,1.0,0.9
+Change Forest,0.98,0.98,0.98,1.0
